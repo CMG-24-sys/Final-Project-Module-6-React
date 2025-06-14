@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picture Perfect Films</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/6dadb9de77.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="landing">
+      <nav>
+        <div class="row">
+          <div class="nav__container">
+            <a href="#">
+              <div class="logo__wrapper">
+                <img
+                  class="logo"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsHm1uM6oRz_FSoFbE6hPfTUN2J_DJbQnk3A&s"
+                  alt=""
+                />
+                <h1 class="logo__text">Picture Perfect Films</h1>
+              </div>
+              <ul class="nav__links">
+                <li>
+                  <a href="" class="nav__link link__hover-effect">Home</a>
+                </li>
+                <li>
+                  <a href="" class="nav__link link__hover-effect">Contact</a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="nav__link nav__link--margin link__hover-effect"
+                    >Login</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="nav__link nav__link--primary">Sign Up</a>
+                </li>
+              </ul>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <header class="header__container">
+        <div class="header__description">
+          <h1 class="header__description--title">
+            <span class="orange">Endless films</span> to choose from.
+          </h1>
+          <p class="header__description--para">
+            Our website has a variety of movies for you to choose from.
+          </p>
+          <form onsubmit="event.preventDefault(); searchMovies();">
+            <input
+              type="text"
+              id="movieSearchInput"
+              placeholder="Movie Title"
+            />
+            <div class="header__btn--wrapper">
+              <button type="submit" class="btn header__btn">
+                Movie Search
+              </button>
+            </div>
+          </form>
+        </div>
+      </header>
+
+      <section id="search-results">
+        <div class="fast__search--results"></div>
+      </section>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="row features__wrapper">
+          <div class="features__description">
+            <h5 class="section__title">
+              <span class="orange">FEAUTURE FILMS THIS WEEK</span>
+            </h5>
+            <h1 class="section__heading features__heading">
+              Find the latest feature films <span class="orange">HERE!</span>
+            </h1>
+            <p class="section__para">
+              Explore the newest films, along with timeless classics in
+              every popular genre.
+            </p>
+            <button class="btn features__btn">Movie Trailers</button>
+          </div>
+          <figure class="features__img--wrapper">
+            <img
+              src="https://www.moviepostersgallery.com/wp-content/uploads/2024/01/Furiosa1.jpg"
+              alt=""
+              class="features__img"
+            />
+          </figure>
+          <figure>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0057/3728/3618/files/mad-max-fury-road_e4sycaf2_500x749.jpg?v=1706563087"
+              alt=""
+              class="features__img-2"
+            />
+          </figure>
+          <figure>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/ItemN241475_jpg_500x749.jpg?v=1641576614"
+              alt=""
+              class="features__img-3"
+            />
+          </figure>
+          <figure>
+            <img
+              src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSPSyrcqWohb0QLO_b8yiwdrAYfdC-3bG51IYqhzOEjBhtJkPl3ktU5oMUyB6rsidHqJ7TUs9dE11ZBkTFEyMeyG-j1-2__y19fuZ7eg-B-dJ0khhgrmy1y&usqp=CAc"
+              alt=""
+              class="features__img-4"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer__copyright">
+        <span class="white">
+          <figure>
+            <img
+              class="footer__logo"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsHm1uM6oRz_FSoFbE6hPfTUN2J_DJbQnk3A&s"
+              alt=""
+            />
+          </figure>
+          <i class="fa-regular fa-copyright"></i> 2024 Picture Perfect Films
+          Inc. All Rights Reserved. <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-square-twitter"></i>
+          <i class="fa-brands fa-square-youtube"></i>
+        </span>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
