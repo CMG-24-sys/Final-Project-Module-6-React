@@ -1,4 +1,5 @@
 import React from 'react';
+import './Price.css';
 
 const Price = ({ salePrice, originalPrice }) => {
     return (
@@ -7,9 +8,9 @@ const Price = ({ salePrice, originalPrice }) => {
                         salePrice ? (
                         <>
                             <span className="movie__price--normal">
-                            ${originalPrice.toFixed(2)}
+                            ${typeof originalPrice === 'number' ? originalPrice.toFixed(2) : 'N/A'}
                             </span>
-                            ${salePrice.toFixed(2)}
+                            ${typeof salePrice === 'number' ? salePrice.toFixed(2) : 'N/A'}
                         </>
                         ) : (
                            <>${originalPrice.toFixed(2)}</>
