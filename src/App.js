@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import react from 'react';
 import './App.css'; // Assuming you have an App.css if needed
+import './index.css';
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
