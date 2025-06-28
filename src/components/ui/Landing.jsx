@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './Landing.css';
-import './App.css'; // Assuming you have an App.css if needed
-import './index.css';
+
+
 
 const API_URL = "https://www.omdbapi.com/?apikey=YOUR_API_KEY&s="; // Replace YOUR_API_KEY with a valid OMDB API key
 

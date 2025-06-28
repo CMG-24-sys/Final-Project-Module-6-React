@@ -2,8 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Rating } from './Rating';
 import { Price } from './Price';
-import './App.css'; // Assuming you have an App.css if needed
-import './index.css';
+
 
 const Movie = ({ movie }) => {
     const [img, setImg] = useState(null);

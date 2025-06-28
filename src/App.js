@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import react from 'react';
 import './App.css'; // Assuming you have an App.css if needed
 import './index.css';
+import Landing from './components/ui/Landing';
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -47,6 +48,8 @@ export default function App() {
 
   return (
     <div className="App">
+      <Landing />
+      {/* Optional: You can remove the Landing component if you want to keep it simple */}
       <header className="App-header">
         <h1>Movie Search</h1>
         <div className="search-bar">
@@ -65,6 +68,7 @@ export default function App() {
           <button onClick={handleSearch}>Search</button>
         </div>
       </header>
+
 
       <main className="fast__search--results">
         {loading && <p>Loading...</p>}

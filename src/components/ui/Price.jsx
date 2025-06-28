@@ -1,7 +1,6 @@
 import React from 'react';
 import './Price.css';
-import './App.css'; // Assuming you have an App.css if needed
-import './index.css';
+
 
 
 const Price = ({ salePrice, originalPrice }) => {
