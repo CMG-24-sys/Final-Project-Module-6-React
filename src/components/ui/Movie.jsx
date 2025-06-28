@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Rating } from './Rating';
 import { Price } from './Price';
+import './App.css'; // Assuming you have an App.css if needed
+import './index.css';
 
 const Movie = ({ movie }) => {
     const [img, setImg] = useState(null);
@@ -37,7 +39,7 @@ const Movie = ({ movie }) => {
                 <>
                     <Link to={`/movies/${movie.id}`}>
                         <figure className="movie__img--wrapper">
-                            <img src={img.src} alt="" className="movie__img" />
+                            <img src={img.src} alt="" className="movie_img" />
                         </figure>
                     </Link>
                     <div className="movie__title">

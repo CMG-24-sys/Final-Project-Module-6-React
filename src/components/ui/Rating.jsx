@@ -1,6 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Rating.css';
 import React from 'react';
+import './App.css'; // Assuming you have an App.css if needed
+import './index.css';
+
 
 const Rating = ({ rating }) => {
     return (
