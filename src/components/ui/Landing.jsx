@@ -76,7 +76,7 @@ const Landing = () => {
             <p className="header__description--para">
               Our website has a variety of movies for you to choose from.
             </p>
-            <form onSubmit={handleSearch}>
+            {/* <form onSubmit={handleSearch}>
               <input
                 type="text"
                 id="movieSearchInput"
@@ -89,9 +89,19 @@ const Landing = () => {
                   Movie Search
                 </button>
               </div>
-            </form>
+            </form> */}
           </div>
         </header>
+
+    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Final%20Project%20Module%206%20React/src/Assets/semi%20circle.svg" className="shape shape--0" />
+    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Exclusive%20Eportfolio/assets/circle.svg" className="shape shape--1" />
+    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Final%20Project%20Module%206%20React/src/Assets/squiggly.svg" className="shape shape--2" />
+    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Exclusive%20Eportfolio/assets/circle.svg" className="shape shape--3" />
+    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Final%20Project%20Module%206%20React/src/Assets/triangle.svg" className="shape shape--4" />
+    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Exclusive%20Eportfolio/assets/circle.svg" className="shape shape--5" />
+    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Final%20Project%20Module%206%20React/src/Assets/squiggly.svg" className="shape shape--6" />
+    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Exclusive%20Eportfolio/assets/circle.svg" className="shape shape--7" />
+    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Final%20Project%20Module%206%20React/src/Assets/semi%20circle.svg" className="shape shape--8" />
 
         <section id="search-results">
           <div className="fast__search--results">

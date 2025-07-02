@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import react from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 import './App.css'; // Assuming you have an App.css if needed
 import './index.css';
 import Landing from './components/ui/Landing';
+// MovieDetail component for showing details
+import MovieDetail from './components/MovieDetail';
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -49,7 +51,6 @@ export default function App() {
   return (
     <div className="App">
       <Landing />
-      {/* Optional: You can remove the Landing component if you want to keep it simple */}
       <header className="App-header">
         <h1>Movie Search</h1>
         <div className="search-bar">
@@ -59,7 +60,7 @@ export default function App() {
             placeholder="Search for a movie..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            onKeyPress={(e) => { // Optional: allow search on Enter key press
+            onKeyDown={(e) => { // Optional: allow search on Enter key press
               if (e.key === 'Enter') {
                 handleSearch();
               }
@@ -69,32 +70,45 @@ export default function App() {
         </div>
       </header>
 
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <main className="fast__search--results">
+              {loading && <p>Loading...</p>}
+              {error && <p className="error-message">{error}</p>}
 
-      <main className="fast__search--results">
-        {loading && <p>Loading...</p>}
-        {error && <p className="error-message">{error}</p>}
-
-        {!loading && !error && searchResults.length > 0 && (
-          <div className="results-grid">
-            {searchResults.map((fast) => {
-              const poster = fast.Poster !== "N/A" ? fast.Poster : "https://via.placeholder.com/200x300?text=No+Poster"; // Fallback image
-              return (
-                <div className="fast__search--result" key={fast.imdbID}> {/* imdbID is usually unique */}
-                  <figure className="fast__search--img--wrapper">
-                    <img className="fast__search--img" src={poster} alt={fast.Title} />
-                  </figure>
-                  <div className="fast__search--title">{fast.Title}</div>
-                  <div className="fast__search--year">{fast.Year}</div>
+              {!loading && !error && Array.isArray(searchResults) && searchResults.length > 0 && (
+                <div className="results-grid">
+                  {searchResults.map((fast) => {
+                    const poster = fast.Poster && fast.Poster !== "N/A" ? fast.Poster : "https://via.placeholder.com/200x300?text=No+Poster";
+                    return (
+                      <div key={fast.imdbID} className="fast__search--result-wrapper">
+                        <Link
+                          to={`/movie/${fast.imdbID}`}
+                          className="fast__search--result"
+                          style={{ textDecoration: 'none', color: 'inherit' }}
+                        >
+                          <figure className="fast__search--img--wrapper">
+                            <img className="fast__search--img" src={poster} alt={fast.Title || "No Title"} />
+                          </figure>
+                          <div className="fast__search--title">{fast.Title || "No Title"}</div>
+                          <div className="fast__search--year">{fast.Year || "Unknown Year"}</div>
+                        </Link>
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
-          </div>
-        )}
+              )}
 
-        {!loading && !error && searchResults.length === 0 && searchQuery.trim() && (
-            <p>Start typing to search for movies!</p>
-        )}
-      </main>
+              {!loading && !error && searchResults.length === 0 && searchQuery.trim() && (
+                <p>No results found. Try a different search!</p>
+              )}
+            </main>
+          }
+        />
+        <Route path="/movie/:id" element={<MovieDetail />} />
+      </Routes>
     </div>
   );
 }
