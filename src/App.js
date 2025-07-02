@@ -6,6 +6,10 @@ import Landing from './components/ui/Landing';
 // MovieDetail component for showing details
 import MovieDetail from './components/MovieDetail';
 
+//Use <Link to={/movie/${imdbID}}> in your search results.
+//Update your App.js to use routes and add the <Link>: Import necessary components from react-router-dom; Add a Route for the movie detail page; Wrap each movie result in a <Link> to /movie/{imdbID}.//
+//Add a route for /movie/:id and a MovieDetail component that uses useParams() to fetch and display movie details.//
+
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);

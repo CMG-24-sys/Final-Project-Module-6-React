@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//import BrowserRouter from react-router-dom in index.js file, then, wrap your <App /> component with <BrowserRouter>//
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,7 +17,7 @@ root.render(
 );
 
 const scaleFactor = 1 / 20; // or whatever value you want
-// ...existing code...
+// ...existing code... //define scaleFactor before using it. For example, add this line before your moveBackground//
 function moveBackground(event) {
   const shapes = document.querySelectorAll(".shape");
   const x = event.clientX * scaleFactor;
