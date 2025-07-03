@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import shape1 from '../../Assets/semi circle.svg';
+import shape2 from '../../Assets/circle.svg';
+import shape3 from '../../Assets/squiggly.svg';
+import shape4 from '../../Assets/triangle.svg';
 
 
 
@@ -93,15 +97,11 @@ const Landing = () => {
           </div>
         </header>
 
-    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Final%20Project%20Module%206%20React/src/Assets/semi%20circle.svg" className="shape shape--0" />
-    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Exclusive%20Eportfolio/assets/circle.svg" className="shape shape--1" />
-    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Final%20Project%20Module%206%20React/src/Assets/squiggly.svg" className="shape shape--2" />
-    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Exclusive%20Eportfolio/assets/circle.svg" className="shape shape--3" />
-    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Final%20Project%20Module%206%20React/src/Assets/triangle.svg" className="shape shape--4" />
-    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Exclusive%20Eportfolio/assets/circle.svg" className="shape shape--5" />
-    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Final%20Project%20Module%206%20React/src/Assets/squiggly.svg" className="shape shape--6" />
-    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Exclusive%20Eportfolio/assets/circle.svg" className="shape shape--7" />
-    <img src="file:///C:/Users/cryst/OneDrive/Desktop/Final%20Project%20Module%206%20React/src/Assets/semi%20circle.svg" className="shape shape--8" />
+        {/* //Background shapes// */}
+        <img src={shape1} className="shape shape--0" />
+        <img src={shape2} className="shape shape--1" />
+        <img src={shape3} className="shape shape--2" />
+        <img src={shape4} className="shape shape--3" />
 
         <section id="search-results">
           <div className="fast__search--results">
